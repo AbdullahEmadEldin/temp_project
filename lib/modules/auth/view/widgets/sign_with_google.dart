@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:temp_project/core/helpers/extensions.dart';
 
+import '../../../../core/constants/app_strings.dart';
 import '../../logic/cubit/login_cubit.dart';
 
 class SignWithGoogleButton extends StatelessWidget {
@@ -34,13 +35,13 @@ class SignWithGoogleButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'LocalizationKeys.loginWithGoogle.tr()',
+              LocalizationKeys.loginWithGoogle.tr(),
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
             ),
             SizedBox(width: 16.0.responsive(context)),
-            SvgPicture.asset('assets/svg/google.svg'),
+            // SvgPicture.asset('assets/svg/google.svg'),
           ],
         ),
       ),

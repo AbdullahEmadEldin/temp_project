@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import 'constants.dart';
+import 'constants/constants.dart';
 import 'services/cache/cache_helper.dart';
 
 enum LanguageType {

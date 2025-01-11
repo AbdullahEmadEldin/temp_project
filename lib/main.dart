@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'app_enrty.dart';
-import 'core/constants.dart';
+import 'core/constants/constants.dart';
 import 'core/lang_manager.dart';
 import 'core/services/cache/cache_helper.dart';
 
@@ -11,8 +11,6 @@ void main() async {
 
   /// Init shared preferences
   await CacheHelper.init();
-
-  ///
 
   /// EasyLocalization Initialization.
   await EasyLocalization.ensureInitialized();

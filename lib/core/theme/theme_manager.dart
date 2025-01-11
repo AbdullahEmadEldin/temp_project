@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../constants/constants.dart';
 import '../services/cache/cache_helper.dart';
 import 'text_styles_manager.dart';
 

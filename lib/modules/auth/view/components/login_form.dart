@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:temp_project/core/helpers/extensions.dart';
 
+import '../../../../core/constants/app_strings.dart';
 import '../../../../core/helpers/app_regex.dart';
 import '../../../../core/widgets/input_field.dart';
 import '../../logic/cubit/login_cubit.dart';
@@ -25,7 +27,7 @@ class _LoginFormState extends State<LoginForm> {
           children: [
             //! ======== Email ========
             Text(
-              'LocalizationKeys.emailLabel.tr()',
+              LocalizationKeys.emailLabel.tr(),
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
@@ -33,12 +35,12 @@ class _LoginFormState extends State<LoginForm> {
             SizedBox(height: 9.0.responsive(context)),
             InputField(
               controller: context.read<LoginCubit>().emailController,
-              hintText: 'LocalizationKeys.emailPlaceholder.tr()',
+              hintText: LocalizationKeys.emailPlaceholder.tr(),
               validator: (value) {
                 if (value == null ||
                     value.isEmpty ||
                     !AppRegex.isEmailValid(value)) {
-                  return 'LocalizationKeys.enterValidEmail.tr()';
+                  return LocalizationKeys.enterValidEmail.tr();
                 }
                 return null;
               },
@@ -46,7 +48,7 @@ class _LoginFormState extends State<LoginForm> {
             SizedBox(height: 16.0.responsive(context)),
             //! ======== password ========
             Text(
-              'LocalizationKeys.passwordLabel.tr()',
+              LocalizationKeys.passwordLabel.tr(),
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
@@ -69,7 +71,7 @@ class _LoginFormState extends State<LoginForm> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'LocalizationKeys.enterValidPassword.tr()';
+                  return LocalizationKeys.enterValidPassword.tr();
                 }
                 return null;
               },

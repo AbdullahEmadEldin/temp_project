@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:temp_project/modules/auth/logic/cubit/login_cubit.dart';
 
 import 'core/services/connectivity/cubit/internet_cubit.dart';
 import 'core/theme/theme_manager.dart';
@@ -46,8 +47,8 @@ class _MyAppState extends State<MyApp> {
               themeMode: themeMode,
               theme: currentTheme,
               darkTheme: AppThemes.darkAppTheme(context),
-              home: const LoginPage(),
-              
+              home: BlocProvider(
+                  create: (context) => LoginCubit(), child: const LoginPage()),
             ),
           );
         });

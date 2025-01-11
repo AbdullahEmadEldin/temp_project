@@ -3,6 +3,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../core/constants/app_strings.dart';
+
 class DontHaveAccount extends StatelessWidget {
   const DontHaveAccount({super.key});
 
@@ -14,13 +16,13 @@ class DontHaveAccount extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: 'LocalizationKeys.noAccountQuestion.tr()',
+              text: LocalizationKeys.noAccountQuestion.tr(),
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
             ),
             TextSpan(
-              text: 'LocalizationKeys.registerLink.tr()',
+              text: LocalizationKeys.registerLink.tr(),
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: Theme.of(context).colorScheme.primary,
                   decoration: TextDecoration.underline,
